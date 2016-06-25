@@ -5,8 +5,8 @@ import { ClotheItem } from '../containers'
 
 const ClotheList = ({items, dispatch}) => {
 	return <ul className="clotheList">{
-		items.map(({img, name, selected, hide} = item, i) => {
-			return <ClotheItem img={img} name={name} selected={selected} hide={hide} key={uuid()}/>;
+		items.map(({id, img, name, selected, hide} = item, i) => {
+			return <ClotheItem id={id} img={img} name={name} selected={selected} hide={hide} key={uuid()}/>;
 		})
 	}</ul>;
 };
@@ -20,21 +20,24 @@ const mapStateToProps = (state, ownProps) => {
 				name: 'Dats my t-shirt',
 				selected: false,
 				hide: false,
-				tags: []
+				tags: [],
+				id: '1111212423432'
 			},
 			{
 				img: '/assets/img/tshirt.jpg',
 				name: 'Dats my t-shirt too!11',
 				selected: false,
 				hide: false,
-				tags: []
+				tags: [],
+				id: '235134543'
 			},
 			{
 				img: '/assets/img/tshirt.jpg',
 				name: 'My uncle t-shirt',
 				selected: false,
 				hide: false,
-				tags: []
+				tags: [],
+				id: '325324r'
 			}
 		]
 	};
