@@ -4,11 +4,15 @@ import { ClotheActions } from '../actions'
 // Return join of all items
 function recalculateRules(items) {
 	let rules = {};
-	for(item of items) {
-		if ( item.notAllowed )
-			for( rule of item.notAllowed )
+	for(let item of items) {
+		if ( item.notAllowed ) {
+			for(let rule of item.notAllowed ) {
 				rules[rule] = true;
+			}
+		}
 	}
+
+	return rules;
 }
 
 // Return changed copy of items array
@@ -26,7 +30,7 @@ const ClotheListReducer = (state = {
 	items: [...DummyBase.items],
 	notAllowed: {}
 }, action) => {
-
+	console.log(action);
 	switch (action.type) {
 		case ClotheActions.ADD_TO_LAUNDRY: {
 			const items = findAndChange(state.items, action.id, {

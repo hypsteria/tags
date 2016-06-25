@@ -1,12 +1,19 @@
 import React from 'react'
 import uuid from 'uuid-v4'
 import { connect } from 'react-redux'
+import { addToLaundry } from '../actions'
 import ClotheItem from './ClotheItem'
 
 const ClotheList = ({items, dispatch}) => {
 	return <ul className="clotheList">{
 		items.map(({id, img, name, selected, hide} = item, i) => {
-			return <ClotheItem id={id} img={img} name={name} selected={selected} hide={hide} key={uuid()}/>;
+			return <ClotheItem onClick={ () => (dispatch(addToLaundry(id))) }
+							   id={id}
+							   img={img}
+							   name={name}
+							   selected={selected}
+							   hide={hide}
+							   key={uuid()}/>;
 		})
 	}</ul>;
 };
