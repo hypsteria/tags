@@ -4,9 +4,9 @@ export default {
 	devtool: 'eval',
 	entry: './frontend/index',
 	output: {
-		path: __dirname,
+		path: path.join(__dirname, 'public'),
 		filename: 'bundle.js',
-		publicPath: '/static/',
+		publicPath: '/public/',
 	},
 	module: {
 		loaders: [{

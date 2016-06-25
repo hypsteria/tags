@@ -1,15 +1,18 @@
 import React from 'react';
 import Menu from './Menu';
 import Content from './Content';
+import { Row, Col } from 'react-bootstrap';
 
 
 const App = () => {
 
 	return (
-		<div>
-			<Menu />
-			<Content />
-		</div>
+		<Row>
+			<Col xs={12} md={12} >
+				<Menu />
+				<Content />
+			</Col>
+		</Row>
 	);
 
 };
