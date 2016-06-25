@@ -5,13 +5,8 @@ import uuid from 'uuid-v4'
 
 const Info = () => (
 	<div>
+		<h2>Информация</h2>
 		<Table striped bordered condensed hover>
-			<thead>
-				<tr>
-					<th>1</th>
-					<th>Описание</th>
-				</tr>
-			</thead>
 			<tbody>
 				{
 					LaundryTags.map(({img, description} = item, i) => {
