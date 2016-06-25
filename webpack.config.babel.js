@@ -2,7 +2,9 @@ import path from 'path';
 
 export default {
 	devtool: 'eval',
-	entry: './frontend/index',
+	entry: {
+		main: './frontend/index',
+	},
 	output: {
 		path: path.join(__dirname, 'public'),
 		filename: 'bundle.js',
