@@ -20,6 +20,7 @@ const mapStateToProps = (state, ownProps) => {
 				name: 'Dats my t-shirt',
 				selected: false,
 				hide: false,
+				tags: [],
 				id: '1111212423432'
 			},
 			{
@@ -27,6 +28,7 @@ const mapStateToProps = (state, ownProps) => {
 				name: 'Dats my t-shirt too!11',
 				selected: false,
 				hide: false,
+				tags: [],
 				id: '235134543'
 			},
 			{
@@ -34,6 +36,7 @@ const mapStateToProps = (state, ownProps) => {
 				name: 'My uncle t-shirt',
 				selected: false,
 				hide: false,
+				tags: [],
 				id: '325324r'
 			}
 		]
