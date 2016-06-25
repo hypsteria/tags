@@ -9,16 +9,16 @@ const Menu = () => {
 		<Navbar inverse>
 			<Navbar.Header>
 				<Navbar.Brand>
-					<a href="#"><Icon icon="tags"/>TagzApp</a>
+					<Icon icon="tags"/>TagzApp
 				</Navbar.Brand>
 				<Navbar.Toggle />
 			</Navbar.Header>
 			<Navbar.Collapse>
 				<Nav pullRight>
-					<MenuItem link="/home"><Icon icon="home"/>Home</MenuItem>
+					<MenuItem link="/home"><Icon icon="home"/>Главная</MenuItem>
 					<MenuItem link="/add"><Icon icon="question"/>FAQ</MenuItem>
-					<MenuItem link="/info"><Icon icon="info"/>Tags Information</MenuItem>
-					<MenuItem link="/add"><Icon icon="plus"/>Add Item</MenuItem>
+					<MenuItem link="/info"><Icon icon="info"/>Информация</MenuItem>
+					<MenuItem link="/add"><Icon icon="plus"/>Добавить одежду</MenuItem>
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>

@@ -1,5 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
 .navbar-inverse {
 	border-radius: 0;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-brand:hover {
+	color: #D6C6B2;
+	cursor: default;
+	font-weight: 300;
 }
 
 .clotheList {
@@ -9,8 +21,14 @@
 }
 
 .clotheList li {
-	display: table;
-	margin-bottom: 10px;
+	overflow: hidden;
+    zoom: 1;
+    padding: 10px;
+    border-bottom: 1px solid #efefef;
+}
+
+.clotheList li:last-child {
+	border-bottom: none;
 }
 
 .clotheList li:after {
@@ -21,23 +39,39 @@
 
 .clotheList li a {
 	display: table-cell;
-	padding: 10px;
-	border: 1px solid #cacaca;
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+}
+
+.clotheList li a img {
+	border-radius: 50%;
+}
+
+.clotheList li a .media-body {
+	vertical-align: middle;
+}
+
+.clotheList li a .media-body p {
+	margin-bottom: 0;
 }
 
 .clotheList li .button-cell {
 	display: table-cell;
-	width: 150px;
 	padding: 0 0 0 10px;
-	vertical-align: top;
+	vertical-align: middle;
 }
 
 .clotheList li .wash-button {
 	width: 150px;
-	background: #d9edf7;
+	background: #D6C6B2;
 	border: none;
-	height: 86px;
-	padding: 0 10px;
+	padding: 10px;
+	opacity: 0.80;
+}
+
+.clotheList li .wash-button:hover {
+	opacity: 0.95;
 }
 
 .clotheList li .wash-button span {

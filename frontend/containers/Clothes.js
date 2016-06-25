@@ -9,7 +9,7 @@ const ClotheItem = ({ id, img, name, selected, hide, onClick }) => {
 				<Link to={url}>
 					<Media>
 						<Media.Left>
-							<img width={64} height={64} src={img} alt="Image"></img>
+							<img width={50} height={50} src={img} alt="Image"></img>
 						</Media.Left>
 						<Media.Body>
 							<p>{name}</p>
