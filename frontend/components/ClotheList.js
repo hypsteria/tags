@@ -1,21 +1,40 @@
 import React from 'react'
-import { uuid } from 'uuid-v4'
+import uuid from 'uuid-v4'
 import { connect } from 'react-redux'
 import { ClotheItem } from '../containers'
 
-const ClotheList = () => {
-	const { items, dispatch } = this.props;
+const ClotheList = ({items, dispatch}) => {
 	return <ul>{
 		items.map(({img, name, selected, hide} = item, i) => {
-			return <ClotheItem img={img} name={name} selected={selected} hide={hide} onClick={
-				// TODO: Dispatch an action CLOTHE_CLICK
-			} key={uuid()}/>;
-		});
+			return <ClotheItem img={img} name={name} selected={selected} hide={hide} key={uuid()}/>;
+		})
 	}</ul>;
-}
+};
 
-export default connect((state, ownProps) => {
+const mapStateToProps = (state, ownProps) => {
 	return {
-		items: state.ClotheList.items
+		//items: state.ClotheList.items
+		items: [
+			{
+				img: '/assets/img/tshirt.jpg',
+				name: 'Dats my t-shirt',
+				selected: false,
+				hide: false
+			},
+			{
+				img: '/assets/img/tshirt.jpg',
+				name: 'Dats my t-shirt too!11',
+				selected: false,
+				hide: false
+			},
+			{
+				img: '/assets/img/tshirt.jpg',
+				name: 'My uncle t-shirt',
+				selected: false,
+				hide: false
+			}
+		]
 	};
-})(ClotheList)
+};
+
+export default connect(mapStateToProps)(ClotheList)
