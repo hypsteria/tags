@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { ClotheItem } from '../containers'
 
 const ClotheList = ({items, dispatch}) => {
-	return <ul>{
+	return <ul className="clotheList">{
 		items.map(({img, name, selected, hide} = item, i) => {
 			return <ClotheItem img={img} name={name} selected={selected} hide={hide} key={uuid()}/>;
 		})

@@ -1,3 +1,18 @@
 .navbar-inverse {
 	border-radius: 0;
 }
+
+.clotheList {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.clotheList li {
+	margin-bottom: 10px;
+}
+
+.clotheList li label {
+	padding: 10px;
+	border: 1px solid #cacaca;
+}

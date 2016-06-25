@@ -4,7 +4,7 @@ import { Button, Alert } from 'react-bootstrap';
 export class AlertDismissable extends React.Component {
 	constructor (props) {
 		super(props);
-		this.state = {alertVisible: true};
+		this.state = {alertVisible: false};
 		this.handleAlertDismiss = this.handleAlertDismiss.bind(this);
 		this.handleAlertShow = this.handleAlertShow.bind(this);
 	}
