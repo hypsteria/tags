@@ -29,7 +29,7 @@ const Info = () => (
 				</tr>
 				<tr>
 					<td><img src="/assets/icons/wh-washing-70deg.svg" /></td>
-					<td></td>
+					<td>Стирка цветного белья (Температура до 70 С)</td>
 				</tr>
 				<tr>
 					<td><img src="/assets/icons/wh-washing-95deg.svg" /></td>
