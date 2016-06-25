@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ClotheItem = () => {
-	const { img, name, selected, hide } = this.props;
+	const { img, name, selected, hide, onClick } = this.props;
 
 	return (<li>
 				<label>
