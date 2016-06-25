@@ -1,6 +1,7 @@
 import React from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import Icon from './Icon';
+import MenuItem from './MenuItem';
 
 const Menu = () => {
 
@@ -14,9 +15,9 @@ const Menu = () => {
 			</Navbar.Header>
 			<Navbar.Collapse>
 				<Nav pullRight>
-					<NavItem eventKey={3} href="#"><Icon icon="question"/>FAQ</NavItem>
-					<NavItem eventKey={2} href="#"><Icon icon="info"/>Tags Information</NavItem>
-					<NavItem eventKey={1} href="#"><Icon icon="plus"/>Add Item</NavItem>
+					<MenuItem link="/add"><Icon icon="question"/>FAQ</MenuItem>
+					<MenuItem link="/add"><Icon icon="info"/>Tags Information</MenuItem>
+					<MenuItem link="/add"><Icon icon="plus"/>Add Item</MenuItem>
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>
