@@ -19,19 +19,22 @@ const mapStateToProps = (state, ownProps) => {
 				img: '/assets/img/tshirt.jpg',
 				name: 'Dats my t-shirt',
 				selected: false,
-				hide: false
+				hide: false,
+				tags: []
 			},
 			{
 				img: '/assets/img/tshirt.jpg',
 				name: 'Dats my t-shirt too!11',
 				selected: false,
-				hide: false
+				hide: false,
+				tags: []
 			},
 			{
 				img: '/assets/img/tshirt.jpg',
 				name: 'My uncle t-shirt',
 				selected: false,
-				hide: false
+				hide: false,
+				tags: []
 			}
 		]
 	};
