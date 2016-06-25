@@ -1,9 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-
-const App = () => (
-	<div>Hello, tagsApp!</div>
-);
+import App from './components/App';
 
 render (
 	<App />,
