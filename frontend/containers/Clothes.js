@@ -1,8 +1,7 @@
 import React from 'react'
+import { Media } from 'react-bootstrap'
 
-const ClotheItem = () => {
-	const { img, name, selected, hide } = this.props;
-
+const ClotheItem = ({ img, name, selected, hide, onClick }) => {
 	return (<li>
 				<label>
 					<Media>

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import ClotheListReducer from './ClotheListReducer.js'
+import ClotheList from './ClotheListReducer.js'
 
 const tagzApp = combineReducers({
-	ClotheListReducer
+	ClotheList
 })
 
 export default tagzApp
