@@ -3,14 +3,7 @@ const LaundryTags = [
 		img:"/assets/icons/wh-washing-30deg.svg",
 		description:"Стирка в тёплой воде (Температура до 30 С)",
 		name:'washing-30deg',
-		category:'washing',
-		notAllowed: [
-			'washing-40deg',
-			'washing-50deg',
-			'washing-60deg',
-			'washing-70deg',
-			'washing-95deg'
-		]
+		category:'washing'	
 	},
 	{
 		img:"/assets/icons/wh-washing-40deg.svg",
@@ -18,10 +11,7 @@ const LaundryTags = [
 		name:'washing-40deg',
 		category:'washing',
 		notAllowed: [
-			'washing-50deg',
-			'washing-60deg',
-			'washing-70deg',
-			'washing-95deg'
+			'washing-30deg',
 		]
 	},
 	{
@@ -30,9 +20,8 @@ const LaundryTags = [
 		name:'washing-50deg',
 		category:'washing',
 		notAllowed: [
-			'washing-60deg',
-			'washing-70deg',
-			'washing-95deg'
+			'washing-30deg',
+			'washing-40deg',
 		]
 	},
 	{
@@ -41,8 +30,9 @@ const LaundryTags = [
 		name:'washing-60deg',
 		category:'washing',
 		notAllowed: [
-			'washing-70deg',
-			'washing-95deg'
+			'washing-30deg',
+			'washing-40deg',
+			'washing-50deg'
 		]
 	},
 	{
@@ -51,27 +41,30 @@ const LaundryTags = [
 		name:'washing-70deg',
 		category:'washing',
 		notAllowed: [
-			'washing-95deg'
+			'washing-30deg',
+			'washing-40deg',
+			'washing-50deg',
+			'washing-60deg'
 		]
 	},
 	{
 		img:"/assets/icons/wh-washing-95deg.svg",
 		description:"Стирка с кипячением. Изделия из хлопка и льна, белое или цветное стойкое к кипячению.",
 		name:'washing-95deg',
-		category:'washing'
+		category:'washing',
+		notAllowed: [
+			'washing-30deg',
+			'washing-40deg',
+			'washing-50deg',
+			'washing-60deg',
+			'washing-70deg'
+		]
 	},
 	{
 		img:"/assets/icons/wh-washing.svg",
 		description:"Нормальная стирка",
 		name:'washing',
-		category:'washing',
-		notAllowed: [
-			'washing-40deg',
-			'washing-50deg',
-			'washing-60deg',
-			'washing-70deg',
-			'washing-95deg'
-		]
+		category:'washing'
 	},
 	{
 		img:"/assets/icons/wh-washing-permanent-press.svg",
