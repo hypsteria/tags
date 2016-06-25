@@ -1,5 +1,7 @@
+import { DummyBase } from '../other'
+
 const ClotheListReducer = (state = {
-	items: []
+	items: [...DummyBase.items]
 }, action) => {
 	switch (action.type) {
 		default:
