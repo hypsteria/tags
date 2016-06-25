@@ -1,7 +1,7 @@
 import React from 'react'
 import uuid from 'uuid-v4'
 import { connect } from 'react-redux'
-import { ClotheItem } from '../containers'
+import ClotheItem from './ClotheItem'
 
 const ClotheList = ({items, dispatch}) => {
 	return <ul className="clotheList">{

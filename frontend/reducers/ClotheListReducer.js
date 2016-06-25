@@ -1,5 +1,5 @@
 import { DummyBase } from '../other'
-import { ClotheActions,  } from '../actions'
+import { ClotheActions } from '../actions'
 
 // Return join of all items
 function recalculateRules(items) {

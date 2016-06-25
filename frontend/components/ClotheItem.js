@@ -1,7 +1,8 @@
 import React from 'react'
 import { Media } from 'react-bootstrap'
-import { WashButton } from '../components'
 import { Link } from 'react-router' 
+
+import WashButton from './WashButton'
 
 const ClotheItem = ({ id, img, name, selected, hide, onClick }) => {
 	let url = '/' + id;
