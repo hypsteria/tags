@@ -1,10 +1,12 @@
 import React from 'react'
 import { Media } from 'react-bootstrap'
-import { WashButton } from '../components' 
+import { WashButton } from '../components'
+import { Link } from 'react-router' 
 
-const ClotheItem = ({ img, name, selected, hide, onClick }) => {
+const ClotheItem = ({ id, img, name, selected, hide, onClick }) => {
+	let url = '/' + id;
 	return (<li>
-				<a href='#'>
+				<Link to={url}>
 					<Media>
 						<Media.Left>
 							<img width={64} height={64} src={img} alt="Image"></img>
@@ -13,7 +15,7 @@ const ClotheItem = ({ img, name, selected, hide, onClick }) => {
 							<p>{name}</p>
 						</Media.Body>
 					</Media>
-				</a>
+				</Link>
 				<WashButton />
 			</li>);
 }

@@ -9,6 +9,7 @@
 }
 
 .clotheList li {
+	display: table;
 	margin-bottom: 10px;
 }
 
@@ -19,14 +20,38 @@
 }
 
 .clotheList li a {
-	float: left;
-	margin-right: 10px;
+	display: table-cell;
 	padding: 10px;
 	border: 1px solid #cacaca;
 }
 
-.clotheList li .wash-button {
-	float: left;
+.clotheList li .button-cell {
+	display: table-cell;
 	width: 150px;
-	background: #ccc;
+	padding: 0 0 0 10px;
+	vertical-align: top;
+}
+
+.clotheList li .wash-button {
+	width: 150px;
+	background: #d9edf7;
+	border: none;
+	height: 86px;
+	padding: 0 10px;
+}
+
+.clotheList li .wash-button span {
+	margin-left: 10px;
+}
+
+@media screen and (max-width: 480px) {
+	.clotheList li .button-cell {
+		width: auto;
+	}
+	.clotheList li .wash-button {
+		width: auto;
+	}
+	.clotheList li .wash-button span {
+		display: none;
+	}
 }

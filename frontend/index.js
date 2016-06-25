@@ -8,6 +8,7 @@ import tagzApp from './reducers';
 import App from './components/App';
 import { ClotheList } from './components';
 import { Info } from './components';
+import { Detailed } from './components';
 
 let store = createStore(tagzApp)
 
@@ -18,6 +19,7 @@ render (
 				<IndexRoute component={ClotheList} />
 				<Route path="home" component={ClotheList} />
 				<Route path="info" component={Info} />
+				<Route path="(:id)" component={Detailed} />
 				<Route path="*"    component={ClotheList} />
 			</Route>
 		</Router>
