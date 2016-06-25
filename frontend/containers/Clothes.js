@@ -1,9 +1,10 @@
 import React from 'react'
 import { Media } from 'react-bootstrap'
+import { WashButton } from '../components' 
 
 const ClotheItem = ({ img, name, selected, hide, onClick }) => {
 	return (<li>
-				<label>
+				<a href='#'>
 					<Media>
 						<Media.Left>
 							<img width={64} height={64} src={img} alt="Image"></img>
@@ -12,7 +13,8 @@ const ClotheItem = ({ img, name, selected, hide, onClick }) => {
 							<p>{name}</p>
 						</Media.Body>
 					</Media>
-				</label>
+				</a>
+				<WashButton />
 			</li>);
 }
 
