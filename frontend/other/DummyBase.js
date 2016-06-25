@@ -5,7 +5,7 @@ const DummyBase = {
 			name: 'Футболка',
 			selected: false,
 			hide: false,
-			tags: [],
+			tags: ['washing-30deg', 'bleaching'],
 			id: '1111212423432'
 		},
 		{
@@ -13,7 +13,7 @@ const DummyBase = {
 			name: 'Вторая футболка',
 			selected: false,
 			hide: false,
-			tags: [],
+			tags: ['washing-50deg', 'bleaching-not-allowed'],
 			id: '235134543'
 		}
 	]
