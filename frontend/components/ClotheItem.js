@@ -17,7 +17,7 @@ const ClotheItem = ({ id, img, name, selected, hide, onClick }) => {
 						</Media.Body>
 					</Media>
 				</Link>
-				<WashButton onClick={onClick} />
+				<WashButton onClick={onClick} selected={selected}/>
 			</li>);
 }
 
