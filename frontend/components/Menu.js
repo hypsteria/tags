@@ -15,7 +15,7 @@ const Menu = () => {
 			</Navbar.Header>
 			<Navbar.Collapse>
 				<Nav pullRight>
-					<MenuItem link="/home"><Icon icon="home"/>Главная</MenuItem>
+					<MenuItem link="/"><Icon icon="home"/>Главная</MenuItem>
 					<MenuItem link="/add"><Icon icon="question"/>FAQ</MenuItem>
 					<MenuItem link="/info"><Icon icon="info"/>Информация</MenuItem>
 					<MenuItem link="/add"><Icon icon="plus"/>Добавить одежду</MenuItem>

@@ -9,6 +9,10 @@ h2 {
 	margin-bottom: 20px;
 }
 
+h4 {
+	margin: 20px 0;
+}
+
 .navbar-inverse {
 	border-radius: 0;
 }
@@ -81,6 +85,15 @@ h2 {
 
 .clotheList li .wash-button span {
 	margin-left: 10px;
+}
+
+.table-condensed>tbody>tr>td,
+.table-condensed>tbody>tr>th,
+.table-condensed>tfoot>tr>td,
+.table-condensed>tfoot>tr>th,
+.table-condensed>thead>tr>td,
+.table-condensed>thead>tr>th {
+	padding: 10px;
 }
 
 @media screen and (max-width: 480px) {

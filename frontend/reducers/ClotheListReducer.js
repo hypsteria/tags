@@ -48,7 +48,8 @@ function hideByRules(items, notAllowed) {
 
 const ClotheListReducer = (state = {
 	items: [...DummyBase.items],
-	notAllowed: {}
+	tags: [...LaundryTags],
+	notAllowed: {},
 }, action) => {
 	switch (action.type) {
 		case ClotheActions.ADD_TO_LAUNDRY: {

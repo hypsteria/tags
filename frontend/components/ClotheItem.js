@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 import WashButton from './WashButton'
 
 const ClotheItem = ({ id, img, name, selected, hide, onClick }) => {
-	let url = '/' + id;
+	let url = '/detail/' + id;
 	return (<li className={hide?'hide':''}>
 				<Link to={url}>
 					<Media>

@@ -17,9 +17,8 @@ render (
 		<Router history={browserHistory}>
 			<Route path="/" component={App}>
 				<IndexRoute component={ClotheList} />
-				<Route path="home" component={ClotheList} />
 				<Route path="info" component={Info} />
-				<Route path="(:id)" component={Detailed} />
+				<Route path="/detail/(:id)" component={Detailed} />
 				<Route path="*"    component={ClotheList} />
 			</Route>
 		</Router>
