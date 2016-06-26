@@ -1,3 +1,4 @@
+import uuid from 'uuid-v4'
 import { DummyBase, LaundryTags } from '../other'
 import { ClotheActions } from '../actions'
 
@@ -88,6 +89,20 @@ const ClotheListReducer = (state = {
 				items: items,
 				notAllowed: {}
 			})
+		}
+
+		case ClotheActions.ADD_CLOTHE: {
+			const item = Object.assign({}, action.item, {
+				id: uuid()
+			});
+
+			const items = [...state.items, item];
+			const notAllowed = recalculateRules(items);
+
+			return Object.assign({}, state, {
+				notAllowed,
+				items: hideByRules(items, notAllowed)
+			});
 		}
 
 		default:
