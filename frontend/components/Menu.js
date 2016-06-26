@@ -9,14 +9,13 @@ const Menu = () => {
 		<Navbar inverse>
 			<Navbar.Header>
 				<Navbar.Brand>
-					<Icon icon="tags"/>TagzApp
+					<a href="/"><Icon icon="tags"/>TagzApp</a>
 				</Navbar.Brand>
 				<Navbar.Toggle />
 			</Navbar.Header>
 			<Navbar.Collapse>
 				<Nav pullRight>
 					<MenuItem link="/"><Icon icon="home"/>Главная</MenuItem>
-					<MenuItem link="/add"><Icon icon="question"/>FAQ</MenuItem>
 					<MenuItem link="/info"><Icon icon="info"/>Информация</MenuItem>
 					<MenuItem link="/add"><Icon icon="plus"/>Добавить одежду</MenuItem>
 				</Nav>

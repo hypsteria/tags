@@ -2,6 +2,7 @@
 
 body {
 	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
 }
 
 h2 {
@@ -13,13 +14,17 @@ h5 {
 	margin: 20px 0;
 }
 
+.btn {
+	border-radius: 0;
+}
+
 .navbar-inverse {
 	border-radius: 0;
 }
 
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-brand:hover {
 	color: #D6C6B2;
-	cursor: default;
+	cursor: pointer;
 	font-weight: 300;
 }
 
