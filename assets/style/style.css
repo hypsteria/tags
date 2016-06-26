@@ -118,6 +118,33 @@ h5 {
 	margin: 10px 0;
 }
 
+.radio-inline {
+	padding: 0;
+	margin: 0 10px;
+}
+
+.radio-inline input[type='radio'] {
+	display: none;
+}
+
+.radio-inline span {
+	display: inline-block;
+	padding: 5px;
+}
+
+.radio-inline input[type='radio']:checked + span {
+	background: rgba(214,198,178,0.77);
+}
+
+form {
+	margin-bottom: 50px;
+}
+
+.form-group.lined {
+	padding-bottom: 10px;
+    border-bottom: 1px solid #efefef;
+}
+
 @media screen and (max-width: 480px) {
 	.clotheList li .button-cell {
 		width: auto;
@@ -127,5 +154,9 @@ h5 {
 	}
 	.clotheList li .wash-button span {
 		display: none;
+	}
+
+	label {
+		display: block;
 	}
 }

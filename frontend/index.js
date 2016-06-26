@@ -9,6 +9,7 @@ import App from './components/App';
 import { ClotheList } from './components';
 import { Info } from './components';
 import { Detailed } from './components';
+import { AddForm } from './components/';
 
 let store = createStore(tagzApp)
 
@@ -18,6 +19,7 @@ render (
 			<Route path="/" component={App}>
 				<IndexRoute component={ClotheList} />
 				<Route path="info" component={Info} />
+				<Route path="add" component={AddForm} />
 				<Route path="/detail/(:id)" component={Detailed} />
 				<Route path="*"    component={ClotheList} />
 			</Route>
