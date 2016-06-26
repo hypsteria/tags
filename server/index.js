@@ -1,6 +1,5 @@
 var express = require('express');
 var app = express();
-var config = require('./config');
 
 // setup the app middlware
 require('./middleware')(app);
