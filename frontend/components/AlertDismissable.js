@@ -4,7 +4,7 @@ import { Button, Alert } from 'react-bootstrap';
 export class AlertDismissable extends React.Component {
 	constructor (props) {
 		super(props);
-		this.state = {alertVisible: false};
+		this.state = {alertVisible: true};
 		this.handleAlertDismiss = this.handleAlertDismiss.bind(this);
 		this.handleAlertShow = this.handleAlertShow.bind(this);
 	}
@@ -21,14 +21,12 @@ export class AlertDismissable extends React.Component {
 
 		if (this.state.alertVisible) {
 			return (
-				<Alert bsStyle="info" onDismiss={this.handleAlertDismiss}>
-					<h4>Oh snap! You got an error!</h4>
-					<p>{this.props.message}</p>
-					<p>
-						<Button bsStyle="danger">Take this action</Button>
-						<span> or </span>
-						<Button onClick={this.handleAlertDismiss}>Hide Alert</Button>
-					</p>
+				<Alert onDismiss={this.handleAlertDismiss}>
+					<h4>Рекомендации к стирке</h4>
+					<div className="text">{this.props.message}</div>
+					<div>
+						<Button onClick={this.handleAlertDismiss}>Сбросить фильтр</Button>
+					</div>
 				</Alert>
 			);
 		}

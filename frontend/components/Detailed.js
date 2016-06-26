@@ -18,9 +18,6 @@ class Detailed extends React.Component {
 
 	render() {
 		let item = this.state.item;
-
-		console.log(item);
-
 		let tags = item.tags.map((item, i) => {
 			let tag = _.find(this.state.tags, {name: item});
 			return <DetailedTag key={uuid()} {...tag} />;
@@ -53,4 +50,3 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 export default connect(mapStateToProps)(Detailed);
-// export default Detailed;
