@@ -1,7 +1,7 @@
 const LaundryTags = [
 	{
 		img:"/assets/icons/wh-washing-30deg.svg",
-		description:"Стирка в тёплой воде (Температура до 30 С)",
+		description:"Стирка в тёплой воде (Температура до 30°С)",
 		name:'washing-30deg',
 		category:'washing',
 		notAllowed: [
@@ -14,7 +14,7 @@ const LaundryTags = [
 	},
 	{
 		img:"/assets/icons/wh-washing-40deg.svg",
-		description:"Стирка белья в теплой воде с нейтральными моющими средствами и стирка цветного белья (Температура до 40 С)",
+		description:"Стирка белья в теплой воде с нейтральными моющими средствами и стирка цветного белья (Температура до 40°С)",
 		name:'washing-40deg',
 		category:'washing',
 		notAllowed: [
@@ -27,7 +27,7 @@ const LaundryTags = [
 	},
 	{
 		img:"/assets/icons/wh-washing-50deg.svg",
-		description:"Стирка цветного белья (Температура до 50 С)",
+		description:"Стирка цветного белья (Температура до 50°С)",
 		name:'washing-50deg',
 		category:'washing',
 		notAllowed: [
@@ -40,7 +40,7 @@ const LaundryTags = [
 	},
 	{
 		img:"/assets/icons/wh-washing-60deg.svg",
-		description:"Стирка цветного белья (Температура до 60 С). Изделия не стойкое к кипячению, например, тонкое белье из хлопка или полиэстровых тканей.",
+		description:"Стирка цветного белья (Температура до 60°С). Изделия не стойкое к кипячению, например, тонкое белье из хлопка или полиэстровых тканей.",
 		name:'washing-60deg',
 		category:'washing',
 		notAllowed: [
@@ -53,7 +53,7 @@ const LaundryTags = [
 	},
 	{
 		img:"/assets/icons/wh-washing-70deg.svg",
-		description:"Стирка цветного белья (Температура до 70 С)",
+		description:"Стирка цветного белья (Температура до 70°С)",
 		name:'washing-70deg',
 		category:'washing',
 		notAllowed: [
@@ -105,7 +105,7 @@ const LaundryTags = [
 	{
 		img:"/assets/icons/wh-washing-hand.svg",
 		category:'washing',
-		description: "Только ручная стирка, не подлежит стирке в стиральной машине. Не тереть, не отжимать. Максимальная температура - 40 С.",
+		description: "Только ручная стирка, не подлежит стирке в стиральной машине. Не тереть, не отжимать. Максимальная температура - 40°С.",
 		name: 'wh-washing-hand'
 	},
 	{
