@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Alert } from 'react-bootstrap';
 import { connect } from 'react-redux';
+import uuid from 'uuid-v4'
 
 import { dismissAlert } from '../actions';
 import { LaundryTags } from '../other';
@@ -24,7 +25,7 @@ export class AlertDismissable extends React.Component {
 					<h4>Рекомендации к стирке</h4>
 					<div className="text">
 						{message.map((item)=>{
-							return <p>{item}</p>;
+							return <p key={uuid()}>{item}</p>;
 						})}
 					</div>
 					<div>
