@@ -26,6 +26,16 @@ function findAndChange(items, id, props) {
 	});
 }
 
+function hideByRules(items, notAllowed) {
+	return items.map((item) => {
+		// TODO: Refactoring!
+		if( notAllowed[item.name] )
+			return Object.assign({}, item, {hide: true});
+		else
+			return Object.assign({}, item, {hide: false});
+	});
+}
+
 const ClotheListReducer = (state = {
 	items: [...DummyBase.items],
 	notAllowed: {}
@@ -37,9 +47,11 @@ const ClotheListReducer = (state = {
 				selected: true
 			});
 
+			const notAllowed = recalculateRules(items);
+
 			return Object.assign({}, state, {
-				notAllowed: recalculateRules(items),
-				items
+				notAllowed,
+				items: hideByRules(items, notAllowed)
 			});
 		}
 
@@ -48,10 +60,12 @@ const ClotheListReducer = (state = {
 				selected: false
 			});
 
+			const notAllowed = recalculateRules(items);
+
 			return Object.assign({}, state, {
-				notAllowed: recalculateRules(items),
-				items
-			})
+				notAllowed,
+				items: hideByRules(items, notAllowed)
+			});	
 		}
 
 		default:
