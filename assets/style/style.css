@@ -91,6 +91,13 @@ h5 {
 	margin-left: 10px;
 }
 
+.clotheList li .wash-button i {
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	margin-right: 0 !important;
+}
+
 .table-condensed>tbody>tr>td,
 .table-condensed>tbody>tr>th,
 .table-condensed>tfoot>tr>td,
