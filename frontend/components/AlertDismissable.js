@@ -17,12 +17,16 @@ export class AlertDismissable extends React.Component {
 	}
 
 	render () {
-		const {alertVisible, instructions} = this.props;
+		const {alertVisible, message} = this.props;
 		if (alertVisible) {
 			return (
 				<Alert onDismiss={this.handleAlertDismiss}>
 					<h4>Рекомендации к стирке</h4>
-					<div className="text">{this.props.message}</div>
+					<div className="text">
+						{message.map((item)=>{
+							return <p>{item}</p>;
+						})}
+					</div>
 					<div>
 						<Button onClick={this.handleAlertDismiss}>Сбросить фильтр</Button>
 					</div>
@@ -56,9 +60,14 @@ const mapStateToProps = (state, ownProps) => {
 		}
 	}
 
+	let message = [];
+	for(let instruction of instructions) {
+		message.push(instruction.description);
+	}
+
 	return {
 		alertVisible,
-		instructions
+		message
 	};
 };
 
