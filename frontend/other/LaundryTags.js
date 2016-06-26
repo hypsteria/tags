@@ -106,7 +106,14 @@ const LaundryTags = [
 		img:"/assets/icons/wh-washing-hand.svg",
 		category:'washing',
 		description: "Только ручная стирка, не подлежит стирке в стиральной машине. Не тереть, не отжимать. Максимальная температура - 40°С.",
-		name: 'wh-washing-hand'
+		name: 'washing-hand',
+		notAllowed: [
+			'washing-50deg',
+			'washing-60deg',
+			'washing-70deg',
+			'washing-95deg',
+			'drying-tumble'
+		]
 	},
 	{
 		img:"/assets/icons/wh-washing-not-allowed.svg",
@@ -114,14 +121,26 @@ const LaundryTags = [
 		category:'washing',
 		name:'washing-not-allowed',
 		notAllowed: [
-			'all-washing'
+			'washing-permanent-press',
+			'washing-hand',
+			'washing-extra-care',
+			'washing-30deg',
+			'washing-40deg',
+			'washing-50deg',
+			'washing-60deg',
+			'washing-70deg',
+			'washing-95deg'
 		]
 	},
 	{
 		img:"/assets/icons/wh-wringing-not-allowed.svg",
 		category:'wringing',
 		description:"Не отжимать, не выкручивать",
-		name:'wringing-not-allowed'
+		name:'wringing-not-allowed',
+		notAllowed: [
+			'drying-tumble',
+			'drying-tumble-not-allowed'
+		]
 	},
 	{
 		img:"/assets/icons/wh-bleaching.svg",
@@ -179,7 +198,10 @@ const LaundryTags = [
 		category: 'dry',
 		name:'drying-tumble',
 		notAllowed: [
-			'drycleaning-not-allowed'
+			'drycleaning-not-allowed',
+			'wringing-not-allowed',
+			'drying-tumble-not-allowed',
+			'washing-hand'
 		]
 	},
 	{
@@ -188,7 +210,11 @@ const LaundryTags = [
 		category: 'dry',
 		name:'drying-tumble-not-allowed',
 		notAllowed: [
-			'drying-tumble'
+			'drying-tumble',
+			'wringing-not-allowed',
+			'drying-tumble-low-heat',
+			'drying-tumble-medium-heat',
+			'drying-tumble-high-heat'
 		]
 	},
 	{
@@ -210,7 +236,8 @@ const LaundryTags = [
 		notAllowed: [
 			'drying-tumble-medium-heat',
 			'drying-tumble-high-heat',
-			'drying-not-allowed'
+			'drying-not-allowed',
+			'drying-tumble-not-allowed'
 		]
 	},
 	{

@@ -13,7 +13,7 @@ const DummyBase = {
 			name: 'Синее платье',
 			selected: false,
 			hide: false,
-			tags: ['washing-30deg', 'bleaching-not-allowed'],
+			tags: ['washing-30deg', 'bleaching-not-allowed', 'washing-hand'],
 			id: '23513324543'
 		},
 		{
@@ -29,7 +29,7 @@ const DummyBase = {
 			name: 'Светлые джинсы',
 			selected: false,
 			hide: false,
-			tags: ['washing-60deg', 'bleaching-not-allowed'],
+			tags: ['washing-60deg', 'bleaching-not-allowed', 'wringing-not-allowed'],
 			id: '6453562'
 		},
 		{
@@ -37,7 +37,7 @@ const DummyBase = {
 			name: 'Уличная толстовка',
 			selected: false,
 			hide: false,
-			tags: ['washing-60deg', 'bleaching-not-allowed'],
+			tags: ['washing-60deg', 'bleaching-not-allowed', 'drycleaning'],
 			id: '2315'
 		},
 		{
@@ -45,7 +45,7 @@ const DummyBase = {
 			name: 'Вечерний наряд',
 			selected: false,
 			hide: false,
-			tags: ['washing-30deg', 'bleaching-not-allowed'],
+			tags: ['washing-30deg', 'bleaching-not-allowed', 'drycleaning'],
 			id: '2143'
 		},
 		{
@@ -53,7 +53,7 @@ const DummyBase = {
 			name: 'Летнее платье',
 			selected: false,
 			hide: false,
-			tags: ['washing-30deg', 'bleaching-not-allowed'],
+			tags: ['washing-30deg', 'bleaching-not-allowed', 'drying-tumble'],
 			id: '324544'
 		},
 		{
@@ -61,7 +61,7 @@ const DummyBase = {
 			name: 'Летний костюм',
 			selected: false,
 			hide: false,
-			tags: ['washing-30deg', 'bleaching-not-allowed'],
+			tags: ['washing-30deg', 'bleaching-not-allowed', 'wringing-not-allowed'],
 			id: '553'
 		},
 		{
@@ -69,7 +69,7 @@ const DummyBase = {
 			name: 'Тёмно-синяя футболка',
 			selected: false,
 			hide: false,
-			tags: ['washing-30deg', 'bleaching-not-allowed'],
+			tags: ['washing-30deg', 'bleaching-not-allowed', 'drying-tumble'],
 			id: '76856'
 		},
 		{
@@ -77,7 +77,7 @@ const DummyBase = {
 			name: 'Бирюзовая рубашка',
 			selected: false,
 			hide: false,
-			tags: ['washing-30deg', 'bleaching-not-allowed'],
+			tags: ['washing-30deg', 'bleaching-not-allowed', 'drying-tumble'],
 			id: '236456'
 		},
 		{
@@ -93,7 +93,7 @@ const DummyBase = {
 			name: 'Серая футболка',
 			selected: false,
 			hide: false,
-			tags: ['washing-30deg', 'bleaching-not-allowed'],
+			tags: ['washing-30deg', 'bleaching-not-allowed', 'drying-tumble-low-heat'],
 			id: '5234'
 		},
 		{
@@ -101,7 +101,7 @@ const DummyBase = {
 			name: 'Черные шорты',
 			selected: false,
 			hide: false,
-			tags: ['washing-30deg', 'bleaching-not-allowed'],
+			tags: ['washing-30deg', 'bleaching-not-allowed', 'drying-tumble-low-heat'],
 			id: '34514'
 		},
 		{
@@ -109,7 +109,7 @@ const DummyBase = {
 			name: 'Пляжное платье',
 			selected: false,
 			hide: false,
-			tags: ['wh-washing-hand', 'bleaching-not-allowed', 'drying-tumble-not-allowed'],
+			tags: ['washing-hand', 'bleaching-not-allowed', 'drying-tumble-not-allowed'],
 			id: '745674567'
 		},
 		{
@@ -117,7 +117,7 @@ const DummyBase = {
 			name: 'Чёрное платье',
 			selected: false,
 			hide: false,
-			tags: ['wh-washing-hand', 'bleaching-not-allowed', 'drying-tumble-not-allowed'],
+			tags: ['washing-hand', 'bleaching-not-allowed', 'drying-tumble-not-allowed'],
 			id: '1344431'
 		},
 		{
@@ -125,7 +125,7 @@ const DummyBase = {
 			name: 'Розовое платье',
 			selected: false,
 			hide: false,
-			tags: ['washing-95deg', 'bleaching-not-allowed'],
+			tags: ['washing-95deg', 'bleaching-not-allowed', 'wringing-not-allowed', 'drying-tumble-medium-heat'],
 			id: '345345'
 		},
 		{
@@ -133,7 +133,7 @@ const DummyBase = {
 			name: 'Джинсы',
 			selected: false,
 			hide: false,
-			tags: ['washing-60deg', 'bleaching-not-allowed'],
+			tags: ['washing-60deg', 'bleaching-not-allowed', 'drying-tumble-medium-heat'],
 			id: '58467547634'
 		}
 	]
