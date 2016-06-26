@@ -49,7 +49,7 @@ function hideByRules(items, notAllowed) {
 const ClotheListReducer = (state = {
 	items: [...DummyBase.items],
 	tags: [...LaundryTags],
-	notAllowed: {},
+	notAllowed: {}
 }, action) => {
 	switch (action.type) {
 		case ClotheActions.ADD_TO_LAUNDRY: {
@@ -61,7 +61,8 @@ const ClotheListReducer = (state = {
 
 			return Object.assign({}, state, {
 				notAllowed,
-				items: hideByRules(items, notAllowed)
+				items: hideByRules(items, notAllowed),
+				alert: true
 			});
 		}
 
@@ -76,6 +77,17 @@ const ClotheListReducer = (state = {
 				notAllowed,
 				items: hideByRules(items, notAllowed)
 			});	
+		}
+
+		case ClotheActions.DROP_FILTERS: {
+			const items = state.items.map((item) => {
+				return Object.assign({}, item, {selected: false, hide: false});
+			});
+
+			return Object.assign({}, state, {
+				items: items,
+				notAllowed: {}
+			})
 		}
 
 		default:

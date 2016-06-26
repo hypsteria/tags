@@ -1,25 +1,24 @@
 import React from 'react';
 import { Button, Alert } from 'react-bootstrap';
+import { connect } from 'react-redux';
+
+import { dismissAlert } from '../actions';
+import { LaundryTags } from '../other';
 
 export class AlertDismissable extends React.Component {
 	constructor (props) {
 		super(props);
-		this.state = {alertVisible: true};
 		this.handleAlertDismiss = this.handleAlertDismiss.bind(this);
-		this.handleAlertShow = this.handleAlertShow.bind(this);
 	}
 
 	handleAlertDismiss() {
-		this.setState({alertVisible: false});
-	}
-
-	handleAlertShow() {
-		this.setState({alertVisible: true});
+		const { dispatch } = this.props;
+		dispatch(dismissAlert());
 	}
 
 	render () {
-
-		if (this.state.alertVisible) {
+		const {alertVisible, instructions} = this.props;
+		if (alertVisible) {
 			return (
 				<Alert onDismiss={this.handleAlertDismiss}>
 					<h4>Рекомендации к стирке</h4>
@@ -37,4 +36,30 @@ export class AlertDismissable extends React.Component {
 	}
 };
 
-export default AlertDismissable;
+const mapStateToProps = (state, ownProps) => {
+	let alertVisible = false;
+	let tags = {};
+	for(let item of state.ClotheList.items) {
+		if( item.selected ) {
+			alertVisible = true;
+			if(item.tags)
+				for(let tag of item.tags)
+					tags[tag] = true;
+		}
+	}
+
+	let instructions = [];
+	for(let tag in tags) {
+		for( let ltag of LaundryTags ) {
+			if( ltag.name == tag )
+				instructions.push(ltag);
+		}
+	}
+
+	return {
+		alertVisible,
+		instructions
+	};
+};
+
+export default connect(mapStateToProps)(AlertDismissable);
