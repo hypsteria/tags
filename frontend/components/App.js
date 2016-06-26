@@ -6,15 +6,13 @@ import AlertDismissable from './AlertDismissable';
 
 const App = ({children}) => {
 	return (
-		<Row>
-			<Col xs={12} md={12} >
-				<Menu />
-				<div className="container">
-					<AlertDismissable />
-					<Content>{children}</Content>
-				</div>
-			</Col>
-		</Row>
+		<div>
+			<Menu />
+			<div className="container">
+				<AlertDismissable />
+				<Content>{children}</Content>
+			</div>
+		</div>
 	);
 };
 
