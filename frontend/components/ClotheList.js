@@ -1,13 +1,14 @@
 import React from 'react'
 import uuid from 'uuid-v4'
 import { connect } from 'react-redux'
-import { addToLaundry } from '../actions'
+import { addToLaundry, removeFromLaundry } from '../actions'
 import ClotheItem from './ClotheItem'
 
 const ClotheList = ({items, dispatch}) => {
 	return <ul className="clotheList">{
 		items.map(({id, img, name, selected, hide} = item, i) => {
-			return <ClotheItem onClick={ () => (dispatch(addToLaundry(id))) }
+			return <ClotheItem buttonAdd={ () => (dispatch(addToLaundry(id))) }
+							   buttonRemove={ () => (dispatch(removeFromLaundry(id))) }
 							   id={id}
 							   img={img}
 							   name={name}
