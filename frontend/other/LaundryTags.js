@@ -3,7 +3,14 @@ const LaundryTags = [
 		img:"/assets/icons/wh-washing-30deg.svg",
 		description:"Стирка в тёплой воде (Температура до 30 С)",
 		name:'washing-30deg',
-		category:'washing'	
+		category:'washing',
+		notAllowed: [
+			'washing-40deg',
+			'washing-50deg',
+			'washing-60deg',
+			'washing-70deg',
+			'washing-95deg'
+		]	
 	},
 	{
 		img:"/assets/icons/wh-washing-40deg.svg",
@@ -12,6 +19,10 @@ const LaundryTags = [
 		category:'washing',
 		notAllowed: [
 			'washing-30deg',
+			'washing-50deg',
+			'washing-60deg',
+			'washing-70deg',
+			'washing-95deg'			
 		]
 	},
 	{
@@ -22,6 +33,9 @@ const LaundryTags = [
 		notAllowed: [
 			'washing-30deg',
 			'washing-40deg',
+			'washing-60deg',
+			'washing-70deg',
+			'washing-95deg'	
 		]
 	},
 	{
@@ -32,7 +46,9 @@ const LaundryTags = [
 		notAllowed: [
 			'washing-30deg',
 			'washing-40deg',
-			'washing-50deg'
+			'washing-50deg',
+			'washing-70deg',
+			'washing-95deg'	
 		]
 	},
 	{
@@ -44,7 +60,8 @@ const LaundryTags = [
 			'washing-30deg',
 			'washing-40deg',
 			'washing-50deg',
-			'washing-60deg'
+			'washing-60deg',
+			'washing-95deg'	
 		]
 	},
 	{
@@ -64,7 +81,14 @@ const LaundryTags = [
 		img:"/assets/icons/wh-washing.svg",
 		description:"Нормальная стирка",
 		name:'washing',
-		category:'washing'
+		category:'washing',
+		notAllowed: [
+			'washing-40deg',
+			'washing-50deg',
+			'washing-60deg',
+			'washing-70deg',
+			'washing-95deg'
+		]
 	},
 	{
 		img:"/assets/icons/wh-washing-permanent-press.svg",
@@ -103,7 +127,10 @@ const LaundryTags = [
 		img:"/assets/icons/wh-bleaching.svg",
 		category:'bleaching',
 		description:"Можно отбеливать",
-		name:'bleaching'
+		name:'bleaching',
+		notAllowed: [
+			'bleaching-not-allowed'
+		]
 	},
 	{
 		img:"/assets/icons/wh-bleaching-not-allowed.svg",
@@ -111,32 +138,49 @@ const LaundryTags = [
 		category:'bleaching',
 		name:'bleaching-not-allowed',
 		notAllowed: [
-			'all-bleaching'
+			'bleaching',
+			'bleaching-non-chlorine'
 		]
 	},
 	{
 		img:"/assets/icons/wh-bleaching-non-chlorine.svg",
 		description:"Можно отбеливать, но только без хлора",
 		category:'bleaching',
-		name:'bleaching-non-chlorine'
+		name:'bleaching-non-chlorine',
+		notAllowed: [
+			'bleaching'
+		]
 	},
 	{
 		img:"/assets/icons/wh-drycleaning.svg",
 		description:"Cухая чистка",
 		category:'dry',
-		name:'drycleaning'
+		name:'drycleaning',
+		notAllowed: [
+			'drycleaning-not-allowed'
+		]
 	},
 	{
 		img:"/assets/icons/wh-drycleaning-not-allowed.svg",
 		description:"Химчистка запрещена",
 		category:'dry',
-		name:'drycleaning-not-allowed'
+		name:'drycleaning-not-allowed',
+		notAllowed: [
+			'drycleaning',
+			'drying-tumble',
+			'drying-tumble-high-heat',
+			'drying-tumble-medium-heat',
+			'drying-tumble-low-heat'
+		]
 	},
 	{
 		img:"/assets/icons/wh-drying-tumble.svg",
 		description:"Можно отжимать и сушить в стиральной машине",
 		category: 'dry',
-		name:'drying-tumble'
+		name:'drying-tumble',
+		notAllowed: [
+			'drycleaning-not-allowed'
+		]
 	},
 	{
 		img:"/assets/icons/wh-drying-tumble-not-allowed.svg",
@@ -165,7 +209,8 @@ const LaundryTags = [
 		name:"drying-tumble-low-heat",
 		notAllowed: [
 			'drying-tumble-medium-heat',
-			'drying-tumble-high-heat'
+			'drying-tumble-high-heat',
+			'drying-not-allowed'
 		]
 	},
 	{
@@ -173,13 +218,17 @@ const LaundryTags = [
 		description:"Сушить при средней температуре (нормальная сушка)",
 		name:"drying-tumble-medium-heat",
 		notAllowed: [
-			'drying-tumble-high-heat'
+			'drying-tumble-high-heat',
+			'drying-not-allowed'
 		]
 	},
 	{
 		img:"/assets/icons/wh-drying-tumble-high-heat.svg",
 		description:"Сушить при высокой температуре",
-		name:"drying-tumble-high-heat"
+		name:"drying-tumble-high-heat",
+		notAllowed: [
+			'drying-not-allowed'
+		]
 	}
 ];
 
