@@ -1,17 +1,24 @@
-import { DummyBase } from '../other'
+import { DummyBase, LaundryTags } from '../other'
 import { ClotheActions } from '../actions'
 
-// Return join of all items
 function recalculateRules(items) {
-	let rules = {};
+	var rules = {};
 	for(let item of items) {
-		if ( item.notAllowed ) {
-			for(let rule of item.notAllowed ) {
-				rules[rule] = true;
+		if ( item.selected ) {
+			// add tag rules to alls
+			// TODO: Refacotr this crap(hackathon solution)
+			for(let tag of item.tags ) {
+				for( var ltag of LaundryTags ) {
+					if( tag == ltag.name ) {
+						if( ltag.notAllowed )
+							for( let rule of ltag.notAllowed ) {
+								rules[rule] = true;
+							}
+					}
+				}
 			}
 		}
 	}
-
 	return rules;
 }
 
@@ -29,10 +36,13 @@ function findAndChange(items, id, props) {
 function hideByRules(items, notAllowed) {
 	return items.map((item) => {
 		// TODO: Refactoring!
-		if( notAllowed[item.name] )
-			return Object.assign({}, item, {hide: true});
-		else
-			return Object.assign({}, item, {hide: false});
+		for(let tag of item.tags) {
+			if( notAllowed[tag] ) {
+				return Object.assign({}, item, {hide: true});
+			}
+		}
+
+		return Object.assign({}, item, {hide: false});
 	});
 }
 
@@ -40,7 +50,6 @@ const ClotheListReducer = (state = {
 	items: [...DummyBase.items],
 	notAllowed: {}
 }, action) => {
-	console.log(action);
 	switch (action.type) {
 		case ClotheActions.ADD_TO_LAUNDRY: {
 			const items = findAndChange(state.items, action.id, {

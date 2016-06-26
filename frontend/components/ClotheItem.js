@@ -6,7 +6,7 @@ import WashButton from './WashButton'
 
 const ClotheItem = ({ id, img, name, selected, hide, onClick }) => {
 	let url = '/' + id;
-	return (<li>
+	return (<li className={hide?'hide':''}>
 				<Link to={url}>
 					<Media>
 						<Media.Left>
