@@ -10,7 +10,7 @@ const App = ({children}) => {
 			<Col xs={12} md={12} >
 				<Menu />
 				<div className="container">
-					<AlertDismissable message='some text' />
+					<AlertDismissable />
 					<Content>{children}</Content>
 				</div>
 			</Col>

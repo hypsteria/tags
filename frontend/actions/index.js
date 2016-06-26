@@ -1,3 +1,3 @@
-import { ClotheActions, addToLaundry, removeFromLaundry } from './ClotheListActions'
+import { ClotheActions, dismissAlert, addToLaundry, removeFromLaundry } from './ClotheListActions'
 
-export { ClotheActions, addToLaundry, removeFromLaundry }
+export { ClotheActions, dismissAlert, addToLaundry, removeFromLaundry }
