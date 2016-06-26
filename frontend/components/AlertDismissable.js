@@ -31,9 +31,7 @@ export class AlertDismissable extends React.Component {
 			);
 		}
 
-		return (
-			<div></div>
-		);
+		return null;
 	}
 };
 
