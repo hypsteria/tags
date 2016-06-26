@@ -9,7 +9,6 @@ const styleTag = {
 };
 
 const DetailedTag = (props) => {
-	console.log(props);
 	return (
 		<div style={styleTag}>
 			<img src={props.img} style={styleImg} />

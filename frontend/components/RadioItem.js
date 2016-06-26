@@ -5,12 +5,12 @@ const styleImg = {
 	'margin' : '0 5px'
 }
 
-const RadioItem = ({name, id, children}) => {
+const RadioItem = ({name, id, onChange, children}) => {
 
 	var src = '/assets/icons/' + id + '.svg';
 
 	return (
-		<Radio inline name={name} id={id} >
+		<Radio inline name={name} id={id} onChange={onChange}>
 			<span>
 				<img src={src} style={styleImg} />
 				{children}
